@@ -25,7 +25,7 @@ const operate = (num1, num2, operator) => {
 };
 
 for (let i = 0; i <= 9; i++) {
-    const calculator = document.querySelector('#calculator');
+    const calculator = document.querySelector('#numberButtons');
     const button = document.createElement('button');
     button.textContent = i;
     button.classList.add('numberButton');

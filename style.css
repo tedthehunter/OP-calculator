@@ -1,7 +1,11 @@
-#calculator {
+#calculator, #numberButtons {
     display: flex;
     width: 400px;
     flex-wrap: wrap;
+}
+
+#numberButtons {
+    flex-wrap: wrap-reverse;
 }
 
 #display {
