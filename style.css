@@ -1,0 +1,16 @@
+#calculator {
+    display: flex;
+    width: 400px;
+    flex-wrap: wrap;
+}
+
+#display {
+    width: 400px;
+    height: 40px;
+    flex-basis: auto;
+}
+
+.operatorButton, .numberButton {
+    height: 40px;
+    width: 25%;
+}
