@@ -27,7 +27,7 @@ const operate = (num1, num2, operator) => {
 for (let i = 0; i <= 9; i++) {
     const button = document.createElement('button');
     button.textContent = i;
-    button.class = 'numberButton';
-    button.id = `${i}button`;
+    button.classList.add('numberButton');
+    button.id = `button${i}`;
     document.body.appendChild(button);
 }
