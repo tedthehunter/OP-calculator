@@ -24,7 +24,10 @@ const operate = (num1, num2, operator) => {
     }
 };
 
-console.log(operate(2, 2, '+'));
-console.log(operate(7, 2, '-'));
-console.log(operate(3, 5, '*'));
-console.log(operate(21, 7, '/'));
+for (let i = 0; i <= 9; i++) {
+    const button = document.createElement('button');
+    button.textContent = i;
+    button.class = 'numberButton';
+    button.id = `${i}button`;
+    document.body.appendChild(button);
+}
