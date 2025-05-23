@@ -16,10 +16,10 @@
 
 .operatorButton {
     height: 40px;
-    width: 25%;
+    flex-grow: 1;
 }
 
 .numberButton {
     height: 40px;
-    width: 33%;
+    flex-basis: 33.33%;
 }
