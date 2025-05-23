@@ -14,7 +14,12 @@
     flex-basis: auto;
 }
 
-.operatorButton, .numberButton {
+.operatorButton {
     height: 40px;
     width: 25%;
+}
+
+.numberButton {
+    height: 40px;
+    width: 33%;
 }
