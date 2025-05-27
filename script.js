@@ -7,7 +7,7 @@ let firstDisplayNum;
 let displayOperator;
 let secondDisplayNum;
 
-const operate = (num1, num2, operator) => {
+const operate = (num1, operator, num2) => {
     switch (operator) {
         case '+':
             return add(num1, num2);
@@ -24,6 +24,7 @@ const operate = (num1, num2, operator) => {
     }
 };
 
+// populates 1-9 buttons
 for (let i = 1; i <= 9; i++) {
     const calculator = document.querySelector('#numberButtons');
     const button = document.createElement('button');
@@ -32,3 +33,11 @@ for (let i = 1; i <= 9; i++) {
     button.id = `button${i}`;
     calculator.appendChild(button);
 }
+
+const displayNumber = function(num) {
+    let display = document.querySelector('#display');
+    display.textContent += num;
+};
+
+displayNumber(9);
+displayNumber(8);
