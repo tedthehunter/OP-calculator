@@ -39,5 +39,4 @@ const displayNumber = function(num) {
     display.textContent += num;
 };
 
-displayNumber(9);
-displayNumber(8);
+document.querySelector('#button9').addEventListener("click", displayNumber(9));
