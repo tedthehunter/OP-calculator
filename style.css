@@ -1,4 +1,4 @@
-#calculator, #numberButtons {
+#calculator {
     display: flex;
     width: 400px;
     flex-wrap: wrap;
@@ -11,13 +11,18 @@
 #display {
     width: 400px;
     height: 40px;
-    flex-basis: auto;
+    margin: 0 0 2px;
 }
 
-.operatorButton {
+#topRow {
+    width: 400px;
+    display: flex;
+    gap: 2px;
+}
+
+.topRowButton {
     height: 40px;
     flex: 1 0 21%;
-    margin: 2px;
 }
 
 .numberButton {
