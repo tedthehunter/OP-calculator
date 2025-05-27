@@ -5,7 +5,23 @@
 }
 
 #numberButtons {
+    display: flex;
     flex-wrap: wrap-reverse;
+    width: 75%;
+    gap: 2px;
+    margin-right: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+#rightColumn {
+    width: 24.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rightColumnButton {
+    flex: 1 0 0;
+    margin-bottom: 2px;
 }
 
 #display {
@@ -18,6 +34,7 @@
     width: 400px;
     display: flex;
     gap: 2px;
+    margin: 0 0 2px;
 }
 
 .topRowButton {
@@ -28,5 +45,8 @@
 .numberButton {
     height: 40px;
     flex: 1 0 30%;
-    margin: 2px;
+}
+
+#button0 {
+    flex: 2 0 60%;
 }
