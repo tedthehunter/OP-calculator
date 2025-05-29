@@ -37,6 +37,7 @@ for (let i = 1; i <= 9; i++) {
 const displayNumber = function(event) {
     let display = document.querySelector('#display');
     display.textContent += this.textContent;
+    firstDisplayNum = display.textContent;
 };
 
 const numberButtons = document.querySelectorAll('.numberButton');
@@ -44,5 +45,3 @@ const numberButtons = document.querySelectorAll('.numberButton');
 for (const button of numberButtons) {
     button.addEventListener("click", displayNumber);
 };
-
-document.querySelector('#button9').addEventListener("click", displayNumber);
