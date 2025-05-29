@@ -3,9 +3,9 @@ const subtract = (num1, num2) => num1 - num2;
 const multiply = (num1, num2) => num1 * num2;
 const divide = (num1, num2) => num1 / num2;
 
-let firstDisplayNum;
-let displayOperator;
-let secondDisplayNum;
+let firstOperationNum;
+let selectedOperator;
+let secondOperationNum;
 
 const operate = (num1, operator, num2) => {
     switch (operator) {
@@ -37,7 +37,7 @@ for (let i = 1; i <= 9; i++) {
 const displayNumber = function(event) {
     let display = document.querySelector('#display');
     display.textContent += this.textContent;
-    firstDisplayNum = display.textContent;
+    firstOperationNum = display.textContent;
 };
 
 const numberButtons = document.querySelectorAll('.numberButton');
@@ -45,9 +45,17 @@ for (const button of numberButtons) {
     button.addEventListener('click', displayNumber);
 };
 
+const operationSelect = function(event) {
+    selectedOperator = this.textContent;
+    console.log(selectedOperator);
+}
+
 const operationButtons = [];
 operationButtons.push(document.querySelector('#buttonPlus'));
 operationButtons.push(document.querySelector('#buttonMinus'));
 operationButtons.push(document.querySelector('#buttonTimes'));
 operationButtons.push(document.querySelector('#buttonDivide'));
 
+for (const button of operationButtons) {
+    button.addEventListener('click', operationSelect);
+};
