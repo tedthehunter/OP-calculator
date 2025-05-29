@@ -7,6 +7,8 @@ let firstOperationNum;
 let selectedOperator;
 let secondOperationNum;
 
+const display = document.querySelector('#display');
+
 const operate = (num1, operator, num2) => {
     switch (operator) {
         case '+':
@@ -35,7 +37,6 @@ for (let i = 1; i <= 9; i++) {
 }
 
 const displayNumber = function(event) {
-    let display = document.querySelector('#display');
     display.textContent += this.textContent;
     firstOperationNum = display.textContent;
 };
@@ -47,7 +48,7 @@ for (const button of numberButtons) {
 
 const operationSelect = function(event) {
     selectedOperator = this.textContent;
-    console.log(selectedOperator);
+    
 }
 
 const operationButtons = [];
