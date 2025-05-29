@@ -48,7 +48,7 @@ for (const button of numberButtons) {
 
 const operationSelect = function(event) {
     selectedOperator = this.textContent;
-    
+    display.textContent = '';
 }
 
 const operationButtons = [];
