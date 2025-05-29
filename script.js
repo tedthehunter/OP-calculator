@@ -39,4 +39,10 @@ const displayNumber = function(event) {
     display.textContent += this.textContent;
 };
 
+const numberButtons = document.querySelectorAll('.numberButton');
+
+for (const button of numberButtons) {
+    button.addEventListener("click", displayNumber);
+};
+
 document.querySelector('#button9').addEventListener("click", displayNumber);
