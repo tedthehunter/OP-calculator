@@ -41,7 +41,13 @@ const displayNumber = function(event) {
 };
 
 const numberButtons = document.querySelectorAll('.numberButton');
-
 for (const button of numberButtons) {
-    button.addEventListener("click", displayNumber);
+    button.addEventListener('click', displayNumber);
 };
+
+const operationButtons = [];
+operationButtons.push(document.querySelector('#buttonPlus'));
+operationButtons.push(document.querySelector('#buttonMinus'));
+operationButtons.push(document.querySelector('#buttonTimes'));
+operationButtons.push(document.querySelector('#buttonDivide'));
+
