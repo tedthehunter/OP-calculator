@@ -48,7 +48,7 @@ for (const button of numberButtons) {
 };
 
 const operationSelect = function(event) {
-    firstOperationNum = display.textContent
+    firstOperationNum = +display.textContent
     selectedOperator = this.textContent;
     display.textContent = '';
 };
@@ -64,7 +64,7 @@ for (const button of operationButtons) {
 };
 
 const updateDisplay = function(event) {
-    secondOperationNum = display.textContent;
+    secondOperationNum = +display.textContent;
     display.textContent = operate(firstOperationNum, selectedOperator, secondOperationNum);
 };
 
