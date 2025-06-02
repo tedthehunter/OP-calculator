@@ -36,9 +36,9 @@ for (let i = 1; i <= 9; i++) {
     calculator.appendChild(button);
 }
 
-const displayNumber = function(event) {
-    display.textContent += this.textContent;
-    firstOperationNum = display.textContent;
+const displayNumber = (num) => {
+    display.textContent += num;
+    //firstOperationNum = display.textContent;
 };
 
 const numberButtons = document.querySelectorAll('.numberButton');
