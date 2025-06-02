@@ -51,7 +51,7 @@ const operationSelect = function(event) {
     firstOperationNum = display.textContent
     selectedOperator = this.textContent;
     display.textContent = '';
-}
+};
 
 const operationButtons = [];
 operationButtons.push(document.querySelector('#buttonPlus'));
@@ -62,3 +62,10 @@ operationButtons.push(document.querySelector('#buttonDivide'));
 for (const button of operationButtons) {
     button.addEventListener('click', operationSelect);
 };
+
+const updateDisplay = function(event) {
+    secondOperationNum = display.textContent;
+    display.textContent = operate(firstOperationNum, selectedOperator, secondOperationNum);
+};
+
+document.querySelector('#buttonEquals').addEventListener('click', updateDisplay);
