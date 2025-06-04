@@ -63,6 +63,8 @@ for (const button of numberButtons) {
 const operationSelect = function(event) {
     //don't want to read num variables from display, reverse
     //operation select needs to only select an operator and clear display
+    selectedOperator =  this.textContent;
+    display.textContent = '';
 };
 
 const operationButtons = [];
