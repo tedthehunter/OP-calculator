@@ -47,9 +47,12 @@ const updateDisplay = (numString) => {
     if (!selectedOperator) {
         firstOperationNum = firstOperationNum.concat(numString);
         display.textContent = firstOperationNum;
+        console.log(`firstOperationNum: ${firstOperationNum}`);
     } else {
         secondOperationNum = secondOperationNum.concat(numString);
         display.textContent = secondOperationNum;
+        console.log(`secondOperationNum: ${secondOperationNum}`);
+
     }
 };
 
@@ -65,6 +68,7 @@ const operationSelect = function(event) {
     //operation select needs to only select an operator and clear display
     selectedOperator =  this.textContent;
     display.textContent = '';
+    console.log(`selectedOperator: ${selectedOperator}`);
 };
 
 const operationButtons = [];
@@ -82,6 +86,12 @@ const performOperation = function(event) {
     //assign firstOperationNum to result of operate
     //clear selectedOperator and secondOperationNum
     //call updateDisplay
+    firstOperationNum = operate(+firstOperationNum, selectedOperator, +secondOperationNum);
+    selectedOperator = secondOperationNum = '';
+    updateDisplay('');
+    console.log(`firstOperationNum: ${firstOperationNum}`);
+    console.log(`selectedOperator: ${selectedOperator}`);
+    console.log(`secondOperationNum: ${secondOperationNum}`);
 };
 
-document.querySelector('#buttonEquals').addEventListener('click', updateDisplay);
+document.querySelector('#buttonEquals').addEventListener('click', performOperation);
