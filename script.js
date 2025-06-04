@@ -36,8 +36,14 @@ for (let i = 1; i <= 9; i++) {
     calculator.appendChild(button);
 }
 
-const displayNumber = (num) => {
-    display.textContent += num;
+//Change name to updateDisplay
+const displayNumber = (numString) => {
+    //want to read display FROM number variables, not the other way
+    //need to include if statement, or switch case
+        //if operator is empty
+            //concat to firstOperationNum, then read to display
+        //if operator exists, read secondOperationNum
+            //concat to secondOperationNum, then read to display
 };
 
 const numberButtons = document.querySelectorAll('.numberButton');
@@ -48,9 +54,8 @@ for (const button of numberButtons) {
 };
 
 const operationSelect = function(event) {
-    firstOperationNum = +display.textContent
-    selectedOperator = this.textContent;
-    display.textContent = '';
+    //don't want to read num variables from display, reverse
+    //operation select needs to only select an operator and clear display
 };
 
 const operationButtons = [];
@@ -63,9 +68,11 @@ for (const button of operationButtons) {
     button.addEventListener('click', operationSelect);
 };
 
+//change name to performOperation
 const updateDisplay = function(event) {
-    secondOperationNum = +display.textContent;
-    display.textContent = operate(firstOperationNum, selectedOperator, secondOperationNum);
+    //assign firstOperationNum to result of operate
+    //clear selectedOperator and secondOperationNum
+    //call updateDisplay
 };
 
 document.querySelector('#buttonEquals').addEventListener('click', updateDisplay);
