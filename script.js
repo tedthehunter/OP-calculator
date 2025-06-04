@@ -37,7 +37,7 @@ for (let i = 1; i <= 9; i++) {
 }
 
 //Change name to updateDisplay
-const displayNumber = (numString) => {
+const updateDisplay = (numString) => {
     //want to read display FROM number variables, not the other way
     //need to include if statement, or switch case
         //if operator is empty
@@ -56,7 +56,7 @@ const displayNumber = (numString) => {
 const numberButtons = document.querySelectorAll('.numberButton');
 for (const button of numberButtons) {
     button.addEventListener('click', () => {
-        displayNumber(button.textContent);
+        updateDisplay(button.textContent);
     });
 };
 
@@ -78,7 +78,7 @@ for (const button of operationButtons) {
 };
 
 //change name to performOperation
-const updateDisplay = function(event) {
+const performOperation = function(event) {
     //assign firstOperationNum to result of operate
     //clear selectedOperator and secondOperationNum
     //call updateDisplay
