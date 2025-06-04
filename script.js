@@ -44,6 +44,13 @@ const displayNumber = (numString) => {
             //concat to firstOperationNum, then read to display
         //if operator exists, read secondOperationNum
             //concat to secondOperationNum, then read to display
+    if (!selectedOperator) {
+        firstOperationNum.concat(numString);
+        display.textContent = firstOperationNum;
+    } else {
+        secondOperationNum.concat(numString);
+        display.textContent = secondOperationNum;
+    }
 };
 
 const numberButtons = document.querySelectorAll('.numberButton');
