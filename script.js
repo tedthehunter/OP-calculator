@@ -3,9 +3,9 @@ const subtract = (num1, num2) => num1 - num2;
 const multiply = (num1, num2) => num1 * num2;
 const divide = (num1, num2) => num1 / num2;
 
-let firstOperationNum;
-let selectedOperator;
-let secondOperationNum;
+let firstOperationNum = '';
+let selectedOperator = '';
+let secondOperationNum = '';
 
 const display = document.querySelector('#display');
 
@@ -45,10 +45,10 @@ const displayNumber = (numString) => {
         //if operator exists, read secondOperationNum
             //concat to secondOperationNum, then read to display
     if (!selectedOperator) {
-        firstOperationNum.concat(numString);
+        firstOperationNum = firstOperationNum.concat(numString);
         display.textContent = firstOperationNum;
     } else {
-        secondOperationNum.concat(numString);
+        secondOperationNum = secondOperationNum.concat(numString);
         display.textContent = secondOperationNum;
     }
 };
