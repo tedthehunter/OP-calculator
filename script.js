@@ -86,13 +86,15 @@ for (const button of operationButtons) {
 };
 
 const performOperation = function(event) {
-    firstOperationNum = String(round(operate(+firstOperationNum, selectedOperator, +secondOperationNum)));
-    selectedOperator = secondOperationNum = '';
-    updateDisplay('');
-    console.log(`firstOperationNum: ${firstOperationNum}`);
-    console.log(`selectedOperator: ${selectedOperator}`);
-    console.log(`secondOperationNum: ${secondOperationNum}`);
-    console.log(`Type: ${typeof secondOperationNum}`)
+    if (firstOperationNum && selectedOperator && secondOperationNum) {
+        firstOperationNum = String(round(operate(+firstOperationNum, selectedOperator, +secondOperationNum)));
+        selectedOperator = secondOperationNum = '';
+        updateDisplay('');
+        console.log(`firstOperationNum: ${firstOperationNum}`);
+        console.log(`selectedOperator: ${selectedOperator}`);
+        console.log(`secondOperationNum: ${secondOperationNum}`);
+        console.log(`Type: ${typeof secondOperationNum}`)
+    };
 };
 
 document.querySelector('#buttonEquals').addEventListener('click', performOperation);
