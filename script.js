@@ -85,3 +85,13 @@ const performOperation = function(event) {
 };
 
 document.querySelector('#buttonEquals').addEventListener('click', performOperation);
+
+const clearAll = () => {
+    firstOperationNum = selectedOperator = secondOperationNum = '';
+    display.textContent = '';
+    console.log(`firstOperationNum: ${firstOperationNum}`);
+    console.log(`selectedOperator: ${selectedOperator}`);
+    console.log(`secondOperationNum: ${secondOperationNum}`);
+};
+
+document.querySelector('#buttonClear').addEventListener('click', clearAll);
