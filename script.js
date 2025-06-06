@@ -48,10 +48,12 @@ const updateDisplay = (numString) => {
         firstOperationNum = firstOperationNum.concat(numString);
         display.textContent = firstOperationNum;
         console.log(`firstOperationNum: ${firstOperationNum}`);
+        console.log(`Type: ${typeof firstOperationNum}`)
     } else {
         secondOperationNum = secondOperationNum.concat(numString);
         display.textContent = secondOperationNum;
         console.log(`secondOperationNum: ${secondOperationNum}`);
+        console.log(`Type: ${typeof secondOperationNum}`)
 
     }
 };
@@ -86,12 +88,13 @@ const performOperation = function(event) {
     //assign firstOperationNum to result of operate
     //clear selectedOperator and secondOperationNum
     //call updateDisplay
-    firstOperationNum = operate(+firstOperationNum, selectedOperator, +secondOperationNum);
+    firstOperationNum = String(operate(+firstOperationNum, selectedOperator, +secondOperationNum));
     selectedOperator = secondOperationNum = '';
     updateDisplay('');
     console.log(`firstOperationNum: ${firstOperationNum}`);
     console.log(`selectedOperator: ${selectedOperator}`);
     console.log(`secondOperationNum: ${secondOperationNum}`);
+    console.log(`Type: ${typeof secondOperationNum}`)
 };
 
 document.querySelector('#buttonEquals').addEventListener('click', performOperation);
