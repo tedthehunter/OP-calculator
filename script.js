@@ -107,4 +107,4 @@ const clearAll = () => {
 
 document.querySelector('#buttonClear').addEventListener('click', clearAll);
 
-const round = (num) => Math.round(num * 1000) / 1000;
+const round = (num) => Math.round(num * 1000000) / 1000000;
