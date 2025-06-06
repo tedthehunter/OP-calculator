@@ -47,7 +47,6 @@ const updateDisplay = (numString) => {
         display.textContent = secondOperationNum;
         console.log(`secondOperationNum: ${secondOperationNum}`);
         console.log(`Type: ${typeof secondOperationNum}`)
-
     }
 };
 
@@ -59,9 +58,15 @@ for (const button of numberButtons) {
 };
 
 const operationSelect = function(event) {
+    //IF operator OR second num is blank do below
     selectedOperator =  this.textContent;
     display.textContent = '';
     console.log(`selectedOperator: ${selectedOperator}`);
+    //ELSE if operator AND second number is already selected
+        //calculate result of operation on 1stnum 2ndnum with selected operator
+        //update display with result of above
+        //make first num equal to result of above
+        //then select clicked operator
 };
 
 const operationButtons = [];
