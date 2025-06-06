@@ -58,7 +58,6 @@ for (const button of numberButtons) {
 };
 
 const operationSelect = function(event) {
-    //IF operator OR second num is blank do below
     if (!selectedOperator || !secondOperationNum) {
         selectedOperator =  this.textContent;
         display.textContent = '';
@@ -68,11 +67,6 @@ const operationSelect = function(event) {
         selectedOperator = this.textContent;
         console.log(`selectedOperator: ${selectedOperator}`);
     }
-    //ELSE if operator AND second number is already selected
-        //calculate result of operation on 1stnum 2ndnum with selected operator
-        //update display with result of above
-        //make first num equal to result of above
-        //then select clicked operator
 };
 
 const operationButtons = [];
@@ -110,3 +104,6 @@ const clearAll = () => {
 document.querySelector('#buttonClear').addEventListener('click', clearAll);
 
 const round = (num) => Math.round(num * 1000000) / 1000000;
+
+//TODO: snarky /0 message, and replace results with new typing
+//extra credit
