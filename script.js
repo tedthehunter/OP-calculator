@@ -86,7 +86,7 @@ for (const button of operationButtons) {
 };
 
 const performOperation = function(event) {
-    firstOperationNum = String(operate(+firstOperationNum, selectedOperator, +secondOperationNum));
+    firstOperationNum = String(round(operate(+firstOperationNum, selectedOperator, +secondOperationNum)));
     selectedOperator = secondOperationNum = '';
     updateDisplay('');
     console.log(`firstOperationNum: ${firstOperationNum}`);
@@ -106,3 +106,5 @@ const clearAll = () => {
 };
 
 document.querySelector('#buttonClear').addEventListener('click', clearAll);
+
+const round = (num) => Math.round(num * 1000) / 1000;
