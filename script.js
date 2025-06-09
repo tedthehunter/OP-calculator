@@ -41,11 +41,9 @@ const updateDisplay = (numString) => {
     if (!selectedOperator) {
         firstOperationNum = firstOperationNum.concat(numString);
         display.textContent = firstOperationNum;
-        console.log(`Display is result of operation: ${result}`);
     } else {
         secondOperationNum = secondOperationNum.concat(numString);
         display.textContent = secondOperationNum;
-        console.log(`Display is result of operation: ${result}`);
     }
 };
 
@@ -54,7 +52,6 @@ for (const button of numberButtons) {
     button.addEventListener('click', () => {
         if (result === true) {
             clearAll();
-            console.log('resetting display');
         }
         updateDisplay(button.textContent);
     });
@@ -65,12 +62,10 @@ const operationSelect = function(event) {
         selectedOperator =  this.textContent;
         display.textContent = '';
         result = false;
-        console.log(`Display is result of operation: ${result}`);
     } else {
         performOperation();
         result = false;
         selectedOperator = this.textContent;
-        console.log(`Display is result of operation: ${result}`);
     }
 };
 
