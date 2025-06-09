@@ -40,13 +40,9 @@ const updateDisplay = (numString) => {
     if (!selectedOperator) {
         firstOperationNum = firstOperationNum.concat(numString);
         display.textContent = firstOperationNum;
-        console.log(`firstOperationNum: ${firstOperationNum}`);
-        console.log(`Type: ${typeof firstOperationNum}`)
     } else {
         secondOperationNum = secondOperationNum.concat(numString);
         display.textContent = secondOperationNum;
-        console.log(`secondOperationNum: ${secondOperationNum}`);
-        console.log(`Type: ${typeof secondOperationNum}`)
     }
 };
 
@@ -61,11 +57,9 @@ const operationSelect = function(event) {
     if (!selectedOperator || !secondOperationNum) {
         selectedOperator =  this.textContent;
         display.textContent = '';
-        console.log(`selectedOperator: ${selectedOperator}`);
     } else {
         performOperation();
         selectedOperator = this.textContent;
-        console.log(`selectedOperator: ${selectedOperator}`);
     }
 };
 
@@ -84,11 +78,6 @@ const performOperation = function(event) {
         firstOperationNum = String(round(operate(+firstOperationNum, selectedOperator, +secondOperationNum)));
         selectedOperator = secondOperationNum = '';
         updateDisplay('');
-        console.log(`firstOperationNum: ${firstOperationNum}`);
-        console.log(`selectedOperator: ${selectedOperator}`);
-        console.log(`secondOperationNum: ${secondOperationNum}`);
-        console.log(`Type: ${typeof secondOperationNum}`)
-        console.log(result);
     };
 };
 
@@ -97,9 +86,6 @@ document.querySelector('#buttonEquals').addEventListener('click', performOperati
 const clearAll = () => {
     firstOperationNum = selectedOperator = secondOperationNum = '';
     display.textContent = '';
-    console.log(`firstOperationNum: ${firstOperationNum}`);
-    console.log(`selectedOperator: ${selectedOperator}`);
-    console.log(`secondOperationNum: ${secondOperationNum}`);
 };
 
 document.querySelector('#buttonClear').addEventListener('click', clearAll);
