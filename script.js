@@ -81,6 +81,11 @@ for (const button of operationButtons) {
 
 const performOperation = function(event) {
     if (firstOperationNum && selectedOperator && secondOperationNum) {
+        if (selectedOperator === '/' && secondOperationNum === '0') {
+            alert('Do not divide by 0. You cannot imagine the consequences.');
+            clearAll();
+            return;
+        }
         firstOperationNum = String(round(operate(+firstOperationNum, selectedOperator, +secondOperationNum)));
         selectedOperator = secondOperationNum = '';
         updateDisplay('');
@@ -99,5 +104,5 @@ document.querySelector('#buttonClear').addEventListener('click', clearAll);
 
 const round = (num) => Math.round(num * 1000000) / 1000000;
 
-//TODO: snarky /0 message, and replace results with new typing
+//TODO: snarky /0 message
 //extra credit
