@@ -6,6 +6,7 @@ const divide = (num1, num2) => num1 / num2;
 let firstOperationNum = '';
 let selectedOperator = '';
 let secondOperationNum = '';
+let result = false;
 
 const display = document.querySelector('#display');
 
@@ -84,6 +85,7 @@ const performOperation = function(event) {
         firstOperationNum = String(round(operate(+firstOperationNum, selectedOperator, +secondOperationNum)));
         selectedOperator = secondOperationNum = '';
         updateDisplay('');
+        result = true;
         console.log(`firstOperationNum: ${firstOperationNum}`);
         console.log(`selectedOperator: ${selectedOperator}`);
         console.log(`secondOperationNum: ${secondOperationNum}`);
