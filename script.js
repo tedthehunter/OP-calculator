@@ -52,6 +52,7 @@ for (const button of numberButtons) {
     button.addEventListener('click', () => {
         if (result === true) {
             clearAll();
+            result = false;
         }
         updateDisplay(button.textContent);
     });
@@ -104,5 +105,4 @@ document.querySelector('#buttonClear').addEventListener('click', clearAll);
 
 const round = (num) => Math.round(num * 1000000) / 1000000;
 
-//TODO: snarky /0 message
 //extra credit
