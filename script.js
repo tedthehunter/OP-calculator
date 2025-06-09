@@ -6,6 +6,7 @@ const divide = (num1, num2) => num1 / num2;
 let firstOperationNum = '';
 let selectedOperator = '';
 let secondOperationNum = '';
+let result = false;
 
 const display = document.querySelector('#display');
 
@@ -40,15 +41,21 @@ const updateDisplay = (numString) => {
     if (!selectedOperator) {
         firstOperationNum = firstOperationNum.concat(numString);
         display.textContent = firstOperationNum;
+        console.log(`Display is result of operation: ${result}`);
     } else {
         secondOperationNum = secondOperationNum.concat(numString);
         display.textContent = secondOperationNum;
+        console.log(`Display is result of operation: ${result}`);
     }
 };
 
 const numberButtons = document.querySelectorAll('.numberButton');
 for (const button of numberButtons) {
     button.addEventListener('click', () => {
+        if (result === true) {
+            clearAll();
+            console.log('resetting display');
+        }
         updateDisplay(button.textContent);
     });
 };
@@ -57,9 +64,13 @@ const operationSelect = function(event) {
     if (!selectedOperator || !secondOperationNum) {
         selectedOperator =  this.textContent;
         display.textContent = '';
+        result = false;
+        console.log(`Display is result of operation: ${result}`);
     } else {
         performOperation();
+        result = false;
         selectedOperator = this.textContent;
+        console.log(`Display is result of operation: ${result}`);
     }
 };
 
@@ -78,6 +89,7 @@ const performOperation = function(event) {
         firstOperationNum = String(round(operate(+firstOperationNum, selectedOperator, +secondOperationNum)));
         selectedOperator = secondOperationNum = '';
         updateDisplay('');
+        result = true;
     };
 };
 
