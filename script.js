@@ -121,11 +121,13 @@ document.querySelector('#buttonClear').addEventListener('click', clearAll);
 
 const round = (num) => Math.round(num * 1000000) / 1000000;
 
+const backspaceButton = document.querySelector('#buttonBackspace');
+backspaceButton.addEventListener('click' () => {
+    
+});
+
 //extra credit
 //TODO:
-    //DISABLE . BUTTON IF . ALREADY IN DISPLAY
-        //modify eventlistener for . button
-            //perform same function as normal, only IF '.' NOT in display
     //ADD BACKSPACE BUTTON TO UNDO LAST INPUT
         //ONLY ALLOW BACKSPACE IF DISPLAY SHOWS AN INPUT, NOT A RESULT
     //ADD KEYBOARD SUPPORT
