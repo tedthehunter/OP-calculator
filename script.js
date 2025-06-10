@@ -106,3 +106,8 @@ document.querySelector('#buttonClear').addEventListener('click', clearAll);
 const round = (num) => Math.round(num * 1000000) / 1000000;
 
 //extra credit
+//TODO:
+    //DISABLE . BUTTON IF . ALREADY IN DISPLAY
+    //ADD BACKSPACE BUTTON TO UNDO LAST INPUT
+        //ONLY ALLOW BACKSPACE IF DISPLAY SHOWS AN INPUT, NOT A RESULT
+    //ADD KEYBOARD SUPPORT
