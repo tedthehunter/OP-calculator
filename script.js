@@ -124,7 +124,8 @@ const round = (num) => Math.round(num * 1000000) / 1000000;
 const backspaceButton = document.querySelector('#buttonBackspace');
 backspaceButton.addEventListener('click', () => {
     if (result === false && display.textContent !== '') {
-        
+        //ASSIGN firstOperationNum to self, removing last digit
+        //updateDisplay to match
     }
 });
 
