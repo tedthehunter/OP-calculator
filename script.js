@@ -58,6 +58,22 @@ for (const button of numberButtons) {
     });
 };
 
+const decimalButton = document.querySelector('#buttonDecimal');
+decimalButton.addEventListener('click', () => {
+    if (result === true) {
+            clearAll();
+            result = false;
+    } 
+    if (display.textContent.includes('.')) {
+        return;
+    } else if (display.textContent === '') {
+        updateDisplay('0');
+        updateDisplay('.');
+    } else {
+        updateDisplay('.');
+    }
+});
+
 const operationSelect = function(event) {
     if (!selectedOperator || !secondOperationNum) {
         selectedOperator =  this.textContent;
