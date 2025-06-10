@@ -126,6 +126,13 @@ backspaceButton.addEventListener('click', () => {
     if (result === false && display.textContent !== '') {
         //ASSIGN firstOperationNum to self, removing last digit
         //updateDisplay to match
+        if (!selectedOperator) {
+            firstOperationNum = firstOperationNum.slice(0, -1);
+            updateDisplay('');
+        } else {
+            secondOperationNum = secondOperationNum.slice(0, -1);
+            updateDisplay('');
+        }
     }
 });
 
