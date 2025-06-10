@@ -122,8 +122,10 @@ document.querySelector('#buttonClear').addEventListener('click', clearAll);
 const round = (num) => Math.round(num * 1000000) / 1000000;
 
 const backspaceButton = document.querySelector('#buttonBackspace');
-backspaceButton.addEventListener('click' () => {
-    
+backspaceButton.addEventListener('click', () => {
+    if (result === false && display.textContent !== '') {
+        
+    }
 });
 
 //extra credit
