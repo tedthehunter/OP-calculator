@@ -134,6 +134,8 @@ backspaceButton.addEventListener('click', () => {
     }
 });
 
+const clickEvent = new Event('click');
+
 
 //extra credit
 //TODO:
