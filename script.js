@@ -197,11 +197,6 @@ document.addEventListener('keydown', (event) => {
             break;
     }
 });
-//extra credit
+
 //TODO:
-    //ADD KEYBOARD SUPPORT
-    //create new click event
-    //add keydown eventlistener to document, reading event.key
-        //write switch case for all possible buttons
-        //in each case, use dispatch event to 'click' button
     //STYLE
