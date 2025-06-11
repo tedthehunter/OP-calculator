@@ -136,7 +136,67 @@ backspaceButton.addEventListener('click', () => {
 
 const clickEvent = new Event('click');
 
-
+document.addEventListener('keydown', (event) => {
+    switch (event.key) {
+        case '0':
+            document.querySelector('#button0').dispatchEvent(clickEvent);
+            break;
+        case '1':
+            document.querySelector('#button1').dispatchEvent(clickEvent);
+            break;
+        case '2':
+            document.querySelector('#button2').dispatchEvent(clickEvent);
+            break;
+        case '3':
+            document.querySelector('#button3').dispatchEvent(clickEvent);
+            break;
+        case '4':
+            document.querySelector('#button4').dispatchEvent(clickEvent);
+            break;
+        case '5':
+            document.querySelector('#button5').dispatchEvent(clickEvent);
+            break;
+        case '6':
+            document.querySelector('#button6').dispatchEvent(clickEvent);
+            break;
+        case '7':
+            document.querySelector('#button7').dispatchEvent(clickEvent);
+            break;
+        case '8':
+            document.querySelector('#button8').dispatchEvent(clickEvent);
+            break;
+        case '9':
+            document.querySelector('#button9').dispatchEvent(clickEvent);
+            break;
+        case '.':
+            document.querySelector('#buttonDecimal').dispatchEvent(clickEvent);
+            break;
+        case '/':
+            document.querySelector('#buttonDivide').dispatchEvent(clickEvent);
+            break;
+        case '*':
+            document.querySelector('#buttonTimes').dispatchEvent(clickEvent);
+            break;
+        case '-':
+            document.querySelector('#buttonMinus').dispatchEvent(clickEvent);
+            break;
+        case '+':
+            document.querySelector('#buttonPlus').dispatchEvent(clickEvent);
+            break;
+        case 'Enter':
+            document.querySelector('#buttonEquals').dispatchEvent(clickEvent);
+            break;
+        case 'Backspace':
+            document.querySelector('#buttonBackspace').dispatchEvent(clickEvent);
+            break;
+        case 'Delete':
+            document.querySelector('#buttonClear').dispatchEvent(clickEvent);
+            break;
+        default:
+            console.log(event.key);
+            break;
+    }
+});
 //extra credit
 //TODO:
     //ADD KEYBOARD SUPPORT
