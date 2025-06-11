@@ -30,7 +30,7 @@
     margin: 0 0 2px;
     padding: 1px 2px;
     border: 1px solid rgb(118, 118, 118);
-    border-radius: 3px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
 }
@@ -55,4 +55,10 @@
 #button0, #buttonBackspace, #buttonDecimal {
     height: 40px;
     flex: 1 0 30%;
+}
+
+button {
+    background-color: rgb(218, 230, 255);
+    border: 1px solid black;
+    border-radius: 8px;
 }
