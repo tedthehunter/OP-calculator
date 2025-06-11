@@ -62,3 +62,11 @@ button {
     border: 1px solid black;
     border-radius: 8px;
 }
+
+#buttonDivide, #buttonTimes, #buttonMinus, #buttonPlus, #buttonEquals {
+    background-color: rgb(255, 205, 130);
+}
+
+#buttonClear, #buttonBackspace {
+    background-color: rgb(255, 113, 113);
+}
