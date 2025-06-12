@@ -197,6 +197,3 @@ document.addEventListener('keydown', (event) => {
             break;
     }
 });
-
-//TODO:
-    //STYLE
